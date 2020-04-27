@@ -1,0 +1,252 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica Neue, Arial, sans-serif;
+  color: white;
+  background-color: black;
+}
+
+/* VARIABLES */
+$red: #e50914;
+$font-title: 3.125rem;
+$font-desc: 1.625rem;
+$gray: #303030;
+
+input[type="text"] {
+  padding: 10px 10px 0;
+  width: 450px;
+  height: 60px;
+  font-size: 16px;
+  border: 1px solid gray;
+}
+
+.subscribe-button {
+  padding: 10px 10px;
+  width: 230px;
+  height: 60px;
+  font-size: 1.625rem;
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+}
+
+.input-button {
+  padding-top: 32px;
+  display: flex;
+}
+
+.create-account {
+  font-size: 1.2rem;
+  padding-top: 12px;
+}
+
+main {
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/3b48f428-24ed-4692-bb04-bc7771854131/7ca1e3b1-9e3c-4591-a24a-c11453b03bc9/FR-en-20200302-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+  background-position: center;
+  border-bottom: 8px solid $gray;
+  width: 100vw;
+  height: 87vh;
+  position: relative;
+  z-index: 0;
+  header {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 48px;
+    z-index: 2;
+    .logo-netflix {
+      height: 36px;
+      width: 133px;
+      fill: $red;
+    }
+
+    .login {
+      font-size: 16px;
+      padding: 8px 16px;
+      background-color: $red;
+      border-radius: 2px;
+      border: none;
+      color: inherit;
+      cursor: pointer;
+      outline: none;
+      &:focus {
+        border-bottom: 1px solid $red;
+      }
+    }
+  }
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    z-index: 1;
+    .subscribe-title {
+      font-size: $font-title;
+      max-width: 640px;
+      text-align: center;
+    }
+  }
+  .filter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.6;
+    z-index: -1;
+  }
+  .subscribe-desc {
+    font-size: $font-desc;
+    font-weight: normal;
+  }
+}
+
+.second-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 8px solid $gray;
+  padding: 70px 45px;
+  height: 474px;
+  .enjoy-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    max-width: 520px;
+  }
+  .enjoy-img {
+    width: 530px;
+  }
+  .enjoy-title {
+    font-size: $font-title;
+    padding-bottom: 16px;
+  }
+  .enjoy-desc {
+    font-size: $font-desc;
+  }
+}
+
+.third-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 8px solid $gray;
+  padding: 70px 45px;
+  height: 470px;
+  .download-img {
+    width: 505px;
+  }
+  .download-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 580px;
+    padding-bottom: 16px;
+  }
+  .download-title {
+    font-size: $font-title;
+    padding-bottom: 16px;
+  }
+  .download-desc {
+    font-size: $font-desc;
+  }
+}
+
+.fourth-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 540px;
+  padding: 70px 45px;
+  border-bottom: 8px solid $gray;
+  .watch-everywhere {
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    padding-bottom: 16px;
+  }
+  .watch-img {
+    width: 555px;
+  }
+  .watch-title {
+    font-size: $font-title;
+    padding-bottom: 16px;
+  }
+  .watch-desc {
+    font-size: $font-desc;
+  }
+}
+
+.last-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 45px;
+  border-bottom: 8px solid $gray;
+  .last-title {
+    font-size: $font-title;
+    padding-top: 8px;
+    padding-bottom: 48px;
+  }
+  .buttons {
+    width: 815px;
+    margin: 0 auto;
+    .last-button:last-child {
+      margin-bottom: 32px;
+    }
+  }
+  .last-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $gray;
+    color: white;
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    outline: none;
+
+    .last-button-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      width: 100%;
+      height: 75px;
+      cursor: pointer;
+
+      &.active + .last-button-desc {
+        display: block;
+      }
+
+      &.active i {
+        transform: rotate(45deg);
+      }
+
+      i {
+        font-size: 24px;
+        transition: transform 0.1s;
+      }
+    }
+
+    .last-button-desc {
+      display: none;
+      background-color: $gray;
+      font-size: 26px;
+      border-top: 1px solid black;
+      padding: 32px 24px;
+      margin-bottom: 10px;
+    }
+  }
+}
