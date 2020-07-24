@@ -94,6 +94,7 @@ main {
       font-size: $font-title;
       max-width: 640px;
       text-align: center;
+      margin-bottom: 16px;
     }
   }
   .filter {
@@ -116,21 +117,20 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  height: 473px;
+  padding: 70px 45px;
   border-bottom: 8px solid $gray;
-
   .enjoy-text {
-    display: flex;
-    flex-direction: column;
-    margin-left: 64px;
+    margin-left: 42px;
     max-width: 520px;
   }
   .enjoy-img {
-    margin: 18px 0;
-    width: 530px;
+    max-width: 530px;
+    margin-bottom: 36px;
   }
   .enjoy-title {
     font-size: $font-title;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
   }
   .enjoy-desc {
     font-size: $font-desc;
