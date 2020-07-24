@@ -117,15 +117,15 @@ main {
   align-items: center;
   justify-content: space-evenly;
   border-bottom: 8px solid $gray;
-  padding: 70px 45px;
-  height: 474px;
+
   .enjoy-text {
     display: flex;
     flex-direction: column;
-    padding-left: 16px;
+    margin-left: 64px;
     max-width: 520px;
   }
   .enjoy-img {
+    margin: 18px 0;
     width: 530px;
   }
   .enjoy-title {
