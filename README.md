@@ -1,4 +1,4 @@
-# Netflix-copycat
+# Netflix
 
 In order to demonstrate my abilities to reproduce any website mock-up (<strong>interface</strong>) <br>
 I chose to re-create from scratch 3 three famous social media: <strong> YouTube, Netflix and Facebook </strong> <br>
